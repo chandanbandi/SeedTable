@@ -5,7 +5,7 @@ $(function(){
         type: 'GET',
         dataType: 'json', // added data type
         success: function(res) {
-            console.log(res);
+            //console.log(res);
             var users = res.users;
             var tbody = $("#seed_table tbody");
             
@@ -14,17 +14,14 @@ $(function(){
             
             $.each(users, function(i,user){
                 
-                
-                
                 var sum = 0;
                 var count = 0;
                 
 
                 for (var j=0; j<scores.length; j++)
                 {
-                    
                     if(scores[j].user_id == users[i].id){
-                        sum = sum + scores[i].score; 
+                        sum = sum + scores[j].score; 
                         count++;
                     }
                 }
